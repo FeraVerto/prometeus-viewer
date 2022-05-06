@@ -1,0 +1,40 @@
+export const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+    width: '30%',
+    //...this.getColumnSearchProps('name'),
+  },
+  {
+    title: 'Type',
+    dataIndex: 'type',
+    key: 'type',
+    width: '20%',
+    //...this.getColumnSearchProps('age'),
+  },
+  {
+    title: 'Lable',
+    dataIndex: 'lable',
+    key: 'lable',
+    //...this.getColumnSearchProps('address'),
+    // sorter: (a, b) => a.address.length - b.address.length,
+    // sortDirections: ['descend', 'ascend'],
+  },
+  {
+    title: 'Description',
+    dataIndex: 'description',
+    key: 'description',
+    //...this.getColumnSearchProps('address'),
+    // sorter: (a, b) => a.address.length - b.address.length,
+    // sortDirections: ['descend', 'ascend'],
+  },
+  {
+    title: 'Value',
+    dataIndex: 'value',
+    key: 'value',
+    //...this.getColumnSearchProps('address'),
+    // sorter: (a, b) => a.address.length - b.address.length,
+    // sortDirections: ['descend', 'ascend'],
+  },
+];

@@ -1,0 +1,28 @@
+{
+  "settings": {
+    "react": {
+      "version": "latest"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["react", "prettier"],
+  "extends": ["react-app", "prettier", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
