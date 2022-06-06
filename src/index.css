@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+table th {
+  color: rgb(92, 107, 119);
+  font-weight: 500;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.ant-table-tbody {
+  border: 2px solid red;
+  width: 100%;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  /* transition: background 0.3s ease 0s; */
+}
+
+/* .ant-table-tbody > tr {
+  min-height: 50px;
+} */
+
