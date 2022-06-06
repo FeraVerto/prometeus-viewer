@@ -6,5 +6,11 @@ import { columns } from '../../menuConstant';
 export const TableData = () => {
   const convertData = useSelector(converterDataSelector);
 
-  return <Table columns={columns} dataSource={convertData.converter} />;
+  return (
+    <Table
+      columns={columns}
+      dataSource={convertData.converter}
+      //bordered={true}
+    />
+  );
 };

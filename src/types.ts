@@ -4,5 +4,5 @@ export interface IConvertedDataItem {
   type: string;
   lable: string;
   description: string;
-  value: string;
+  value: number | string;
 }
