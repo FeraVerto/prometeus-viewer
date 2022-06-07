@@ -10,7 +10,7 @@ export const columns = [
     title: 'Type',
     dataIndex: 'type',
     key: 'type',
-    width: '20%',
+    width: '8%',
     //...this.getColumnSearchProps('age'),
   },
   {

@@ -23,7 +23,9 @@ table {
 }
 
 .ant-table-tbody > tr > td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-collapse: collapse;
+  text-align: left;
   /* transition: background 0.3s ease 0s; */
 }
 

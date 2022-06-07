@@ -7,8 +7,23 @@ export const convertData = (data: string) => {
   let mainResult = dataSplit.reduce((acc, element, index) => {
     const item = element.trim();
 
-    //Выводим всё, что в фигурных скобках
-    const lable = item.match(/[^{\}]+(?=})/g)?.join(' ') ?? '';
+    const lable = item
+      .match(/[^{\}]+(?=})/g)
+      ?.join(',')
+      .split(',')
+      .map((item, index) => {
+        if (index !== 0) {
+          return (
+            <span key={index}>
+              <br />
+              {item}
+            </span>
+          );
+        } else {
+          return <span key={index}>{item}</span>;
+        }
+      });
+    console.log('lable', typeof lable);
 
     //const histogramType = ['_bucket', '_count', '_sum'];
 
