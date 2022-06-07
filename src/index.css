@@ -12,11 +12,9 @@ code {
     monospace;
 }
 
-table th {
-  color: rgb(92, 107, 119);
-  font-weight: 500;
-  white-space: nowrap;
-  background: rgba(0, 0, 0, 0.02);
+table {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .ant-table-tbody {
