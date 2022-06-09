@@ -15,21 +15,65 @@ code {
 table {
   margin: 0 auto;
   width: 80%;
-}
-
-.ant-table-tbody {
-  border: 2px solid red;
-  width: 100%;
+  border-collapse: collapse;
 }
 
 .ant-table-tbody > tr > td {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-collapse: collapse;
   text-align: left;
-  /* transition: background 0.3s ease 0s; */
 }
 
-/* .ant-table-tbody > tr {
-  min-height: 50px;
-} */
+.ant-table-pagination.ant-pagination {
+  margin: 16px 0px;
+}
+
+.ant-pagination {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  list-style: none;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.5715;
+  font-feature-settings: "tnum";
+  font-variant: tabular-nums;
+  list-style: none;
+}
+
+.ant-pagination-item,
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  min-width: 32px;
+  height: 32px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 2px;
+  border-image: initial;
+  font-size: 12px;
+}
+
+.ant-pagination-item {
+  margin-right: 8px;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "apple color emoji", "segoe ui emoji", "Segoe UI Symbol", "noto color emoji";
+  line-height: 30px;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  outline: 0px;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  padding: 0px;
+  display: block;
+  outline: none;
+  transition: all 0.3s ease 0s;
+}
 
