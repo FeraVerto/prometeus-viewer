@@ -1,29 +1,33 @@
 import { IConvertedDataItem } from '../types';
+import { shuffle } from './shuffle';
+import { colors } from './../constants/constants';
 
 export const convertData = (data: string) => {
-  //const dataSplit = data.split('#').map((m) => m.trim().split(' '));
   const dataSplit = data.trim().split('#');
 
   let mainResult = dataSplit.reduce((acc, element, index) => {
     const item = element.trim();
 
-    const lable = item
-      .match(/[^{\}]+(?=})/g)
-      ?.join(',')
-      .split(',')
-      .map((item, index) => {
-        if (index !== 0) {
-          return (
-            <span key={index}>
-              <br />
-              {item}
+    let shuffledColors = shuffle(colors);
+    let lable;
+    lable = item.match(/[^{\}]+(?=})/g)?.map((item, index) => {
+      return (
+        <span
+          key={index}
+          style={{
+            color: shuffledColors[index],
+          }}
+        >
+          {index !== 0 ? <br /> : <></>}
+
+          {item.split(',').map((item) => (
+            <span>
+              {index !== 0 ? <br /> : <></>} {item}
             </span>
-          );
-        } else {
-          return <span key={index}>{item}</span>;
-        }
-      });
-    console.log('lable', typeof lable);
+          ))}
+        </span>
+      );
+    });
 
     //const histogramType = ['_bucket', '_count', '_sum'];
 
