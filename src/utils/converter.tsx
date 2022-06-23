@@ -2,6 +2,9 @@ import { IConvertedDataItem } from '../types';
 import { shuffle } from './shuffle';
 import { colors } from './../constants/constants';
 
+const descriptions = {} as any;
+console.log('descriptions', descriptions);
+
 export const convertData = (data: string) => {
   const dataSplit = data.trim().split('#');
 
@@ -15,6 +18,7 @@ export const convertData = (data: string) => {
         <span
           key={index}
           style={{
+            //здесь баг
             color: shuffledColors[index],
           }}
         >
@@ -33,35 +37,41 @@ export const convertData = (data: string) => {
 
     //достаем из строки name
     let lastIndexDataName = 0;
-    for (let i = 7; i < item.length; i++) {
+    for (let i = 5; i < item.length; i++) {
       if (item[i] !== ' ') {
         lastIndexDataName = i;
       } else {
         break;
       }
     }
-    const name = item.substring(6, lastIndexDataName + 1).trim();
+    const name = item.substring(5, lastIndexDataName + 1).trim();
 
     const description = item.includes('HELP')
       ? item.split(' ').slice(4).join(' ')
       : '';
+
+    const descriptionKey = (index + 1).toString();
+
+    descriptions[descriptionKey as string] = description;
 
     const typeList = ['counter', 'gauge', 'histogram'];
     const type = typeList.find((type) => item.includes(type) && type) ?? '';
 
     const value = (/\d+/.exec(item) ?? [])[0] ?? '';
 
-    return [
-      ...acc,
-      {
-        key: index.toString(),
-        name: name,
-        type: type,
-        lable: lable,
-        description: description,
-        value: value,
-      },
-    ];
+    return item.includes('HELP')
+      ? [...acc]
+      : [
+          ...acc,
+          {
+            key: index.toString(),
+            name: name,
+            type: type,
+            lable: lable,
+            description: descriptions[index],
+            value: value,
+          },
+        ];
   }, [] as IConvertedDataItem[]);
   return mainResult;
 };
