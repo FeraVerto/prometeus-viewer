@@ -52,7 +52,9 @@ export const convertData = (data: string) => {
 
     const descriptionKey = (index + 1).toString();
 
-    descriptions[descriptionKey as string] = description;
+    if (description) {
+      descriptions[descriptionKey as string] = description;
+    }
 
     const typeList = ['counter', 'gauge', 'histogram'];
     const type = typeList.find((type) => item.includes(type) && type) ?? '';
