@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { convertData } from './../../utils/converter';
+import { convertData } from '../../utils/converter';
 import { converterActions } from '../../store/converterSlice';
 import { Button, Input } from 'antd';
 
