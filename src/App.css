@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-btn-icon-only {
+  width: 150px !important;
+  height: 150px !important;
+}
+
+.ant-btn .anticon svg {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.add_data_button {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.logo {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}

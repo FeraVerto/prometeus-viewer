@@ -7,6 +7,7 @@ import { TransformData } from './pages/TransformData/TransformData';
 import { Container } from './components/Container/Container';
 import { converterDataSelector } from './store/converterSlice';
 import { Button } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 import { ModalData } from './components/Modal/Modal';
 
 function App() {
@@ -30,10 +31,17 @@ function App() {
   } else {
     return (
       <>
-        <Header />
-        <Button type="primary" onClick={showModal}>
-          Open Modal
-        </Button>
+        <div className="logo">
+          <Header />
+        </div>
+        <div className="add_data_button">
+          <Button
+            type="primary"
+            shape="circle"
+            onClick={showModal}
+            icon={<PlusOutlined />}
+          ></Button>
+        </div>
         {isModalVisible && <ModalData visible={isModalVisible} />}
       </>
     );

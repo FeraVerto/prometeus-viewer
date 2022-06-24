@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import { convertData } from '../../utils/converter';
 import { converterActions } from '../../store/converterSlice';
 import { Button, Input } from 'antd';
+import s from '../TransformData/TransformData.module.css';
 
 export const TransformData = () => {
+  const { TextArea } = Input;
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
 
@@ -19,15 +21,9 @@ export const TransformData = () => {
 
   return (
     <Input.Group compact>
-      <Input
-        onChange={onChangeData}
-        style={{
-          width: 'calc(100% - 400px)',
-        }}
-        defaultValue="https://ant.design"
-      />
-      <Button type="primary" onClick={convertText}>
-        Submit
+      <TextArea rows={4} />
+      <Button className={s.convert_btn} type="primary" onClick={convertText}>
+        Показать
       </Button>
     </Input.Group>
   );
