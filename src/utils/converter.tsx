@@ -3,9 +3,9 @@ import { shuffle } from './shuffle';
 import { colors } from './../constants/constants';
 
 const descriptions = {} as any;
-console.log('descriptions', descriptions);
 
 export const convertData = (data: string) => {
+  console.log('data converter', data);
   const dataSplit = data.trim().split('#');
 
   let mainResult = dataSplit.reduce((acc, element, index) => {

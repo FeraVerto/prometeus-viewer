@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { convertData } from '../../utils/converter';
 import { converterActions } from '../../store/converterSlice';
@@ -9,19 +9,21 @@ export const TransformData = () => {
   const { TextArea } = Input;
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState<string>('');
+  console.log('inputText', inputText);
 
-  const onChangeData = (evt: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeData = (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputText(evt.target.value);
   };
 
   const convertText = () => {
     const data = convertData(inputText);
+    console.log('data', data);
     dispatch(converterActions.saveData(data));
   };
 
   return (
     <Input.Group compact>
-      <TextArea rows={4} />
+      <TextArea rows={4} onChange={onChangeData} />
       <Button className={s.convert_btn} type="primary" onClick={convertText}>
         Показать
       </Button>
