@@ -63,3 +63,15 @@
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
+
+.popup {
+  width: 50%;
+  height: 600px;
+}
+
+.ant-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 80px;
+}
+

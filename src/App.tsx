@@ -8,14 +8,19 @@ import { Container } from './components/Container/Container';
 import { converterDataSelector } from './store/converterSlice';
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-import { ModalData } from './components/Modal/Modal';
+import { PopupData } from './components/Modal/PopupData';
+import { IConvertedDataItem } from './types';
 
 function App() {
   const data = useSelector(converterDataSelector);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isVisiblePopup, setIsVisiblePopup] = useState(false);
 
   const showModal = () => {
-    setIsModalVisible(true);
+    setIsVisiblePopup(true);
+  };
+
+  const addData = (data: IConvertedDataItem[]) => {
+    console.log('data', data);
   };
 
   if (data.converter.length !== 0) {
@@ -42,7 +47,9 @@ function App() {
             icon={<PlusOutlined />}
           ></Button>
         </div>
-        {isModalVisible && <ModalData visible={isModalVisible} />}
+        {isVisiblePopup && (
+          <PopupData setIsVisiblePopup={setIsVisiblePopup} onSubmit={addData} />
+        )}
       </>
     );
   }

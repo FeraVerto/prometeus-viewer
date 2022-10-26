@@ -5,10 +5,13 @@ import { colors } from './../constants/constants';
 const descriptions = {} as any;
 
 export const convertData = (data: string) => {
-  console.log('data converter', data);
   const dataSplit = data.trim().split('#');
+  console.log('dataSplit', dataSplit);
 
   let mainResult = dataSplit.reduce((acc, element, index) => {
+    if (index === 0) {
+      return [];
+    }
     const item = element.trim();
 
     let shuffledColors = shuffle(colors);
@@ -75,5 +78,7 @@ export const convertData = (data: string) => {
           },
         ];
   }, [] as IConvertedDataItem[]);
+
+  console.log('mainResult', mainResult);
   return mainResult;
 };
