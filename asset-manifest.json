@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/prometeus-viewer/static/css/main.f7d52868.css",
-    "main.js": "/prometeus-viewer/static/js/main.575c87b8.js",
+    "main.css": "/prometeus-viewer/static/css/main.48c33ac1.css",
+    "main.js": "/prometeus-viewer/static/js/main.7cb7d1f4.js",
     "static/js/787.28cb0dcd.chunk.js": "/prometeus-viewer/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/prometeus-viewer/index.html",
-    "main.f7d52868.css.map": "/prometeus-viewer/static/css/main.f7d52868.css.map",
-    "main.575c87b8.js.map": "/prometeus-viewer/static/js/main.575c87b8.js.map",
+    "main.48c33ac1.css.map": "/prometeus-viewer/static/css/main.48c33ac1.css.map",
+    "main.7cb7d1f4.js.map": "/prometeus-viewer/static/js/main.7cb7d1f4.js.map",
     "787.28cb0dcd.chunk.js.map": "/prometeus-viewer/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7d52868.css",
-    "static/js/main.575c87b8.js"
+    "static/css/main.48c33ac1.css",
+    "static/js/main.7cb7d1f4.js"
   ]
 }
