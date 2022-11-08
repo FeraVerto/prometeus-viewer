@@ -6,7 +6,6 @@ const descriptions = {} as any;
 
 export const convertData = (data: string) => {
   const dataSplit = data.trim().split('#');
-  console.log('dataSplit', dataSplit);
 
   let mainResult = dataSplit.reduce((acc, element, index) => {
     if (index === 0) {

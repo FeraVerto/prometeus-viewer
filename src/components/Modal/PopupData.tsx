@@ -27,6 +27,9 @@ export const PopupData = ({
   };
   const convertText = () => {
     const data = convertData(inputText);
+    if (data.length === 0) {
+      //здесь предупреждение что в окно вставлено что-то не то
+    }
     dispatch(converterActions.saveData(data));
   };
   return (
@@ -34,7 +37,7 @@ export const PopupData = ({
       {/* <TransformData /> */}
       <Input.Group compact>
         <TextArea rows={20} onChange={onChangeData} />
-        <Button className={s.convert_btn} type="primary" onClick={convertText}>
+        <Button type="primary" shape="round" onClick={convertText}>
           Показать
         </Button>
       </Input.Group>

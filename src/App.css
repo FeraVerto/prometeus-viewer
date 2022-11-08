@@ -65,13 +65,23 @@
 }
 
 .popup {
+  padding: 20px;
   width: 50%;
-  height: 600px;
 }
 
-.ant-btn {
+button.ant-btn {
   margin-top: 20px;
-  width: 200px;
-  height: 80px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  text-transform: uppercase;
 }
 
+/* .ant-input-group.ant-input-group-compact > *:last-child,
+.ant-input-group.ant-input-group-compact > .ant-select:last-child > .ant-select-selector,
+.ant-input-group.ant-input-group-compact > .ant-cascader-picker:last-child .ant-input {
+  background-color: red;
+  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+} */
