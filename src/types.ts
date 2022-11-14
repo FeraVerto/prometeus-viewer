@@ -7,4 +7,7 @@ export interface IConvertedDataItem {
   lable: ReactNode;
   description: string;
   value: number | string;
+  title?: string;
+  dataIndex?: string;
+  width?: string;
 }
