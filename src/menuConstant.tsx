@@ -1,14 +1,12 @@
-import type { InputRef } from 'antd';
 import React from 'react';
+import type { InputRef } from 'antd';
+import { Button, Input, Space } from 'antd';
 import 'antd/dist/antd.css';
 import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Space } from 'antd';
 import type { ColumnType } from 'antd/es/table';
 import type { FilterConfirmProps } from 'antd/es/table/interface';
-import { IConvertedDataItem } from './types';
+import { IConvertedDataItem, DataIndex } from './types';
 import Highlighter from 'react-highlight-words';
-
-type DataIndex = keyof IConvertedDataItem;
 
 export const getColumns = (
   searchText: string,

@@ -11,3 +11,5 @@ export interface IConvertedDataItem {
   dataIndex?: string;
   width?: string;
 }
+
+export type DataIndex = keyof IConvertedDataItem;
