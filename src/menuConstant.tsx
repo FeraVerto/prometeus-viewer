@@ -1,7 +1,7 @@
 import React from 'react';
 import type { InputRef } from 'antd';
 import { Button, Input, Space } from 'antd';
-import 'antd/dist/antd.css';
+//import 'antd/dist/antd.css';
 import { SearchOutlined } from '@ant-design/icons';
 import type { ColumnType } from 'antd/es/table';
 import type { FilterConfirmProps } from 'antd/es/table/interface';

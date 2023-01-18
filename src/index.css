@@ -76,3 +76,11 @@ table {
   transition: all 0.3s ease 0s;
 }
 
+.ant-input {
+  height: 50px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 11px;
+}
+
