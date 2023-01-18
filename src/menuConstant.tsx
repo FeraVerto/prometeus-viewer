@@ -38,6 +38,7 @@ export const getColumns = (
       selectedKeys,
       confirm,
       clearFilters,
+      close,
     }) => (
       <div style={{ padding: 8 }}>
         <Input
@@ -75,19 +76,8 @@ export const getColumns = (
             type="link"
             size="small"
             onClick={() => {
-              confirm({ closeDropdown: false });
-              setSearchText((selectedKeys as string[])[0]);
-              setSearchedColumn(dataIndex);
+              close();
             }}
-          >
-            Filter
-          </Button>
-          <Button
-            type="link"
-            size="small"
-            // onClick={() => {
-            //   close();
-            // }}
           >
             close
           </Button>

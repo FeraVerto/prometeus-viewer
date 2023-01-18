@@ -3,7 +3,7 @@ import type { InputRef } from 'antd';
 import { useSelector } from 'react-redux';
 import { converterDataSelector } from '../../store/converterSlice';
 import { getColumns } from '../../menuConstant';
-import { Button, Input, Space, Table } from 'antd';
+import { Table } from 'antd';
 
 export const TableData = () => {
   const convertData = useSelector(converterDataSelector);
