@@ -63,7 +63,7 @@ export const convertData = (data: string) => {
 
     const value = (/\d+/.exec(item) ?? [])[0] ?? '';
 
-    return item.includes('HELP')
+    return item.includes('HELP') || !lable
       ? [...acc]
       : [
           ...acc,
@@ -78,6 +78,5 @@ export const convertData = (data: string) => {
         ];
   }, [] as IConvertedDataItem[]);
 
-  console.log('mainResult', mainResult);
   return mainResult;
 };
